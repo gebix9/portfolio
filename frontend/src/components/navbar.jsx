@@ -14,6 +14,8 @@ const MyNavbar = () => {
             <Nav.Link href="/etude">Étude</Nav.Link>
             <Nav.Link href="/projets">Projets</Nav.Link>
             <Nav.Link href="/certifications">Certifications</Nav.Link>
+            <Nav.Link href="/formations">Formations</Nav.Link>
+            <Nav.Link href="/contact">Contact</Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>
             <Nav.Link href="/cv">CV</Nav.Link>
           </Nav>

@@ -8,6 +8,7 @@ import CV from './pages/CV';
 import Etude from './pages/Etude';
 import Projets from './pages/Projets';
 import Certifications from './pages/certifications';
+import Formations from './pages/Formations';
 const AppRoutes = () => {
   return (
     <Routes>
@@ -15,6 +16,7 @@ const AppRoutes = () => {
       <Route path="/etude" element={<Etude />} />
       <Route path="/projets" element={<Projets />} />
       <Route path="/certifications" element={<Certifications />} />
+      <Route path="/formations" element={<Formations />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/CV" element={<CV/>}/>
 
