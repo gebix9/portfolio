@@ -1,23 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Navbar from './components/navbar';
+import Footer from './components/footer';
+
+import AppRoutes from './router';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  const [message, setMessage] = useState('');
-
-  useEffect(() => {
-    fetch("http://127.0.0.1:8000/hello")
-      .then(res => res.json())
-      .then(data => {
-        console.log(data); // juste pour test
-        setMessage(data.message); // si tu renvoies { message: "blabla" } depuis Laravel
-      })
-      .catch(err => console.error("Erreur:", err));
-  }, []);
-
   return (
-    <div>
-      <h1>Réponse de Laravel :</h1>
-      <p>{message}</p>
-    </div>
+    <Router>
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <Navbar />
+
+        <main style={{ flex: 1 }} className="container my-4">
+          <AppRoutes/>
+        </main>
+
+        {/* <Footer /> */}
+      </div>
+    </Router>
   );
 }
 
