@@ -1,11 +1,7 @@
 <?php
 
+use App\Http\Controllers\CertificationsController;
+use App\Http\Controllers\TypeCertificationsController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/hello', function () {
-    return ['message' => 'Salut depuis Laravel'];
-});
+Route::get('/certifications/get/certifications', [CertificationsController::class, 'index']);
