@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\DB;
+use App\Models\TypeCertifications;
 
 class TypeCertificationsController extends Controller
 {
     public function index()
     {
-        return DB::table('type_certifications')
-            ->select('id', 'nom')
-            ->orderBy('id')
-            ->get();
+        $typeCertifications = TypeCertifications::all();
+
+        return response()->json($typeCertifications);
     }
 }

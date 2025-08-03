@@ -11,7 +11,7 @@ const Certifications = () => {
     useEffect(() => {
         const fetchData = async () => {
         try {
-            const res = await http.get("/certifications/get/certifications");
+            const res = await http.get("/certifications");
             setCertifications(res.data);
         } catch (err) {
             console.error("Erreur chargement des certifs :", err);
