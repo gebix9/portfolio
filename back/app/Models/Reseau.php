@@ -9,5 +9,7 @@ class Reseau extends Model
 {
     use HasFactory;
 
+    protected $table = 'reseaux';
+
     protected $fillable = ['nom', 'lien', 'logo'];
 }
