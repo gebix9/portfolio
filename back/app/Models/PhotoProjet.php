@@ -12,11 +12,11 @@ class PhotoProjet extends Model
     protected $fillable = [
         'nom',
         'image',
+        'projets_id',
     ];
 
-    // Un PhotoProjet peut être lié à plusieurs projets
     public function projets()
     {
-        return $this->hasMany(Projets::class);
+        return $this->belongsTo(Projets::class);
     }
 }
