@@ -9,10 +9,21 @@ class Projets extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['type_projet_id', 'nom', 'objectif', 'lien'];
+    protected $fillable = [
+        'titre',
+        'descriptif',
+        'image',
+        'lien',
+        'type_projet_id',
+        'photo_projet_id',
+    ];
 
     public function typeProjet()
     {
         return $this->belongsTo(TypeProjets::class);
+    }
+
+    public function photoProjet(){
+        return $this->belongTo(PhotoProjet::class);
     }
 }
